@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/mauriciokj/rd_challenge.git
-  revision: 7de7b111945e1a6f6b468e4b78cb2fb55b6d1402
+  revision: cb9cf60787738b591efe6549c4236511a4990ac7
   specs:
-    rd_challenge (0.0.7)
+    rd_challenge (0.0.1)
       restforce
 
 GEM
@@ -153,7 +153,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.1.4)
-  rd_challenge (= 0.0.7)!
+  rd_challenge (= 0.0.1)!
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
