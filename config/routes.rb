@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :leads
 
   get 'salesforce_configuration' => 'salesforce_configurations#edit'
-  post 'salesforce_configuration' => 'salesforce_configurations#update'
+  patch 'salesforce_configuration' => 'salesforce_configurations#update'
 
   devise_for :users
 
