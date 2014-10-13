@@ -23,6 +23,6 @@ class SalesforceConfigurationsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def salesforce_configuration_params
-      params.require(:salesforce_configuration).permit(:client_id, :client_secret, :username, :password, :password_secret, :user_id)
+      params.require(:salesforce_configuration).permit(:client_id, :client_secret, :username, :password, :security_token, :user_id)
     end
 end
