@@ -13,7 +13,7 @@ class SalesforceConfigurationsController < ApplicationController
 
     respond_to do |format|
       if @salesforce_configuration.save
-        format.html { redirect_to contacts_path }
+        format.html { redirect_to leads_path }
       else
         format.html { render :edit }
       end
