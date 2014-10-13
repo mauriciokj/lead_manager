@@ -8,8 +8,15 @@ class SalesforceConfigurationsController < ApplicationController
 
   # POST /salesforce_configurations
   def update
-    @salesforce_configuration = current_user.salesforce_configuration || SalesforceConfiguration.new(salesforce_configuration_params)
+    if current_user.salesforce_configuration
+      current_user.salesforce_configuration.update(salesforce_configuration_params)
+    else
+      SalesforceConfiguration.new(salesforce_configuration_params)
+    end
+    @salesforce_configuration = current_user.salesforce_configuration
     @salesforce_configuration.user = current_user
+    puts @salesforce_configuration
+    puts @salesforce_configuration.valid?
 
     respond_to do |format|
       if @salesforce_configuration.save

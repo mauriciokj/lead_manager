@@ -99,7 +99,7 @@ class LeadsController < ApplicationController
         attribute.Email = @lead.email
         attribute.Phone = @lead.phone
         attribute.Company = @lead.company
-        attribute.Tittle = @lead.tittle
+        attribute.Title = @lead.title
         attribute.Website = @lead.website
         attribute.Id = @lead.sales_force_id
       end
@@ -109,6 +109,6 @@ class LeadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
-      params.require(:lead).permit(:first_name, :last_name, :email, :phone, :company, :tittle, :website)
+      params.require(:lead).permit(:first_name, :last_name, :email, :phone, :company, :title, :website)
     end
 end
